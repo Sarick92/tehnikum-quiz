@@ -1,4 +1,6 @@
 import React from "react";
+import { AppButton } from "../components/AppButton";
+import { Link } from "react-router-dom";
 
 const StepOne = () => {
   return (
@@ -32,9 +34,9 @@ const StepOne = () => {
                 Введите номер в правильном формате например
               </span>
             </label>
-            <button type="button" disabled id="next-btn">
-              Далее
-            </button>
+            <Link to="step-two">
+              <AppButton isDisabled={false} />
+            </Link>
           </div>
         </div>
       </div>

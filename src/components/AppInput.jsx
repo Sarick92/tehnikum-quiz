@@ -5,6 +5,8 @@ export const AppInput = ({
   errorText,
   inputPlaceholder,
   inputType,
+  inputValue,
+  inputChange,
 }) => {
   return (
     <label className="input-wrapper" htmlFor="username">
@@ -15,6 +17,8 @@ export const AppInput = ({
         name="username"
         id="username"
         placeholder={inputPlaceholder}
+        value={inputValue}
+        onChange={(event) => inputChange(event.target.value)}
       />
       <span id="error-message">{errorText}</span>
     </label>

@@ -1,4 +1,6 @@
 import React from "react";
+import { AppButton } from "../components/AppButton";
+import { Link } from "react-router-dom";
 
 const StepTwo = () => {
   return (
@@ -39,9 +41,9 @@ const StepTwo = () => {
                 <label htmlFor="variant-4">Ваш ответ</label>
               </li>
             </ul>
-            <button type="button" disabled id="next-btn">
-              Далее
-            </button>
+            <Link to="step-three">
+              <AppButton isDisabled={false} />
+            </Link>
           </div>
         </div>
       </div>
